@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Address Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>IP Address Finder</h1>
+    <p>Discover your location and nearby post offices</p>
+  </header>
+
+  <main class="container">
+    <section class="location-section">
+      <div class="section-heading">
+        <div>
+          <h2>Your Location</h2>
+          <p>Information based on your public IP address</p>
+        </div>
+        <button id="get-data-btn" type="button">Get My Data</button>
+      </div>
+
+      <p id="message" role="status">Loading your location...</p>
+
+      <div id="user-info" class="info-grid">
+        <div class="info-card">
+          <span>IP Address</span>
+          <strong id="ip">--</strong>
+        </div>
+        <div class="info-card">
+          <span>City</span>
+          <strong id="city">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Region</span>
+          <strong id="region">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Country</span>
+          <strong id="country">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Postal Code</span>
+          <strong id="postal">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Timezone</span>
+          <strong id="timezone">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Latitude</span>
+          <strong id="latitude">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Longitude</span>
+          <strong id="longitude">--</strong>
+        </div>
+        <div class="info-card">
+          <span>Local Time</span>
+          <strong id="local-time">--</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h2>Location on Map</h2>
+      <div class="map-container">
+        <iframe
+          id="map"
+          title="Map showing your IP-based location"
+          src="about:blank"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="post-office-section">
+      <div class="section-heading">
+        <div>
+          <h2>Post Offices</h2>
+          <p id="post-office-count">Post offices near your postal code</p>
+        </div>
+      </div>
+
+      <input
+        type="search"
+        id="search"
+        placeholder="Search by post office or branch name..."
+        aria-label="Search post offices"
+      />
+
+      <div id="post-office-list" class="post-office-grid">
+        <p>Post offices will appear here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Location details are estimated using your public IP address.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
